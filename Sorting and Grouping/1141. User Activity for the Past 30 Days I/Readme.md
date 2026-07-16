@@ -26,34 +26,48 @@ Return:
 * `day`
 * `active_users`
 
-Example 1:
 
-Input: 
-Activity table:
-+---------+------------+---------------+---------------+
+## Example
+
+### Input
+
+**Activity**
+
 | user_id | session_id | activity_date | activity_type |
-+---------+------------+---------------+---------------+
-| 1       | 1          | 2019-07-20    | open_session  |
-| 1       | 1          | 2019-07-20    | scroll_down   |
-| 1       | 1          | 2019-07-20    | end_session   |
-| 2       | 4          | 2019-07-20    | open_session  |
-| 2       | 4          | 2019-07-21    | send_message  |
-| 2       | 4          | 2019-07-21    | end_session   |
-| 3       | 2          | 2019-07-21    | open_session  |
-| 3       | 2          | 2019-07-21    | send_message  |
-| 3       | 2          | 2019-07-21    | end_session   |
-| 4       | 3          | 2019-06-25    | open_session  |
-| 4       | 3          | 2019-06-25    | end_session   |
-+---------+------------+---------------+---------------+
+|--------:|-----------:|---------------|---------------|
+| 1 | 1 | 2019-07-20 | open_session |
+| 1 | 1 | 2019-07-20 | scroll_down |
+| 1 | 1 | 2019-07-20 | end_session |
+| 2 | 4 | 2019-07-20 | open_session |
+| 2 | 4 | 2019-07-21 | send_message |
+| 2 | 4 | 2019-07-21 | end_session |
+| 3 | 2 | 2019-07-21 | open_session |
+| 3 | 2 | 2019-07-21 | send_message |
+| 3 | 2 | 2019-07-21 | end_session |
+| 4 | 3 | 2019-06-25 | open_session |
+| 4 | 3 | 2019-06-25 | end_session |
 
-Output: 
-+------------+--------------+ 
-| day        | active_users |
-+------------+--------------+ 
-| 2019-07-20 | 2            |
-| 2019-07-21 | 2            |
-+------------+--------------+ 
+### Output
 
+| day | active_users |
+|------------|-------------:|
+| 2019-07-20 | 2 |
+| 2019-07-21 | 2 |
+
+### Explanation
+
+The required date range is **2019-06-28** to **2019-07-27**.
+
+- **2019-07-20** → Active users: **1, 2** → **2 users**
+- **2019-07-21** → Active users: **2, 3** → **2 users**
+- **2019-06-25** is **outside** the 30-day period, so **User 4 is ignored**.
+
+Therefore, the result is:
+
+```text
+2019-07-20 → 2
+2019-07-21 → 2
+```
 ---
 
 # Problem Summary
