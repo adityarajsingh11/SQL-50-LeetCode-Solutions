@@ -30,36 +30,50 @@ Contains all available products.
 Write a solution to find the **customers who bought every product**.
 
 Return the result in any order.
+## Example
 
-Example 1:
+### Input
 
-Input: 
-Customer table:
-+-------------+-------------+
+**Customer**
+
 | customer_id | product_key |
-+-------------+-------------+
-| 1           | 5           |
-| 2           | 6           |
-| 3           | 5           |
-| 3           | 6           |
-| 1           | 6           |
-+-------------+-------------+
+|------------:|------------:|
+| 1 | 5 |
+| 2 | 6 |
+| 3 | 5 |
+| 3 | 6 |
+| 1 | 6 |
 
-Product table:
-+-------------+
+**Product**
+
 | product_key |
-+-------------+
-| 5           |
-| 6           |
-+-------------+
+|------------:|
+| 5 |
+| 6 |
 
-Output: 
-+-------------+
+### Output
+
 | customer_id |
-+-------------+
-| 1           |
-| 3           |
-+-------------+
+|------------:|
+| 1 |
+| 3 |
+
+### Explanation
+
+- Total products available = **2** (Products **5** and **6**)
+
+| Customer | Products Bought | Bought All Products? |
+|----------|-----------------|----------------------|
+| **1** | 5, 6 | ✅ Yes |
+| **2** | 6 | ❌ No (Product 5 missing) |
+| **3** | 5, 6 | ✅ Yes |
+
+Therefore, the answer is:
+
+```text
+1
+3
+```
 
 ---
 
