@@ -24,27 +24,46 @@ Write a solution to calculate **the number of unique subjects each teacher teach
 
 Return the result in any order.
 
-Input: 
-Teacher table:
-+------------+------------+---------+
-| teacher_id | subject_id | dept_id |
-+------------+------------+---------+
-| 1          | 2          | 3       |
-| 1          | 2          | 4       |
-| 1          | 3          | 3       |
-| 2          | 1          | 1       |
-| 2          | 2          | 1       |
-| 2          | 3          | 1       |
-| 2          | 4          | 1       |
-+------------+------------+---------+
-Output:  
-+------------+-----+
-| teacher_id | cnt |
-+------------+-----+
-| 1          | 2   |
-| 2          | 4   |
-+------------+-----+
 
+## Example
+
+### Input
+
+**Teacher**
+
+| teacher_id | subject_id | dept_id |
+|-----------:|-----------:|--------:|
+| 1 | 2 | 3 |
+| 1 | 2 | 4 |
+| 1 | 3 | 3 |
+| 2 | 1 | 1 |
+| 2 | 2 | 1 |
+| 2 | 3 | 1 |
+| 2 | 4 | 1 |
+
+### Output
+
+| teacher_id | cnt |
+|-----------:|----:|
+| 1 | 2 |
+| 2 | 4 |
+
+### Explanation
+
+| Teacher | Subjects Taught | Unique Subjects | Count |
+|--------:|-----------------|-----------------|------:|
+| **1** | 2, 2, 3 | 2, 3 | 2 |
+| **2** | 1, 2, 3, 4 | 1, 2, 3, 4 | 4 |
+
+- **Teacher 1** teaches subjects **2** and **3**. Subject **2** appears twice but is counted only **once**.
+- **Teacher 2** teaches **4 unique subjects**: **1, 2, 3, and 4**.
+
+Therefore, the result is:
+
+```text
+Teacher 1 → 2 unique subjects
+Teacher 2 → 4 unique subjects
+```
 ---
 
 # Problem Summary
