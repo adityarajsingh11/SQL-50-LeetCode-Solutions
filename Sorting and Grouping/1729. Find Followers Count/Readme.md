@@ -27,6 +27,44 @@ Write a solution to find the **number of followers** for each user.
 
 Return the result ordered by **user_id**.
 
+## Example
+
+### Input
+
+**Followers**
+
+| user_id | follower_id |
+|--------:|------------:|
+| 0 | 1 |
+| 1 | 0 |
+| 2 | 0 |
+| 2 | 1 |
+
+### Output
+
+| user_id | followers_count |
+|--------:|----------------:|
+| 0 | 1 |
+| 1 | 1 |
+| 2 | 2 |
+
+### Explanation
+
+| User | Followers | Followers Count |
+|-----:|-----------|----------------:|
+| **0** | 1 | 1 |
+| **1** | 0 | 1 |
+| **2** | 0, 1 | 2 |
+
+Therefore, the result is:
+
+```text
+User 0 → 1 follower
+User 1 → 1 follower
+User 2 → 2 followers
+```
+
+
 ---
 
 # Problem Summary
