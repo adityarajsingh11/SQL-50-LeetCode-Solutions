@@ -22,29 +22,53 @@ Write a solution to find the **largest single number**.
 
 If there is no single number, return **NULL**.
 
-#### Example 1:
 
-Input: 
-MyNumbers table:
-+-----+
-| num |
-+-----+
-| 8   |
-| 8   |
-| 3   |
-| 3   |
-| 1   |
-| 4   |
-| 5   |
-| 6   |
-+-----+
-Output: 
-+-----+
-| num |
-+-----+
-| 6   |
-+-----+
+## Example
 
+### Input
+
+**MyNumbers**
+
+| num |
+|-----|
+| 8 |
+| 8 |
+| 3 |
+| 3 |
+| 1 |
+| 4 |
+| 5 |
+| 6 |
+
+### Output
+
+| num |
+|-----|
+| 6 |
+
+### Explanation
+
+- Number **8** appears **2** times ❌
+- Number **3** appears **2** times ❌
+- Number **1** appears **1** time ✅
+- Number **4** appears **1** time ✅
+- Number **5** appears **1** time ✅
+- Number **6** appears **1** time ✅
+
+Single numbers are:
+
+```text
+1
+4
+5
+6
+```
+
+The **largest single number** is:
+
+```text
+6
+```
 ---
 
 # Problem Summary
