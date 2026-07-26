@@ -757,5 +757,5 @@ LIMIT
 
 **Completed all 7 Advanced Select and Joins problems from LeetCode SQL 50.**
 
-Progress: **43 / 50** 🚀
+Progress: **36 / 50** 🚀
 
